@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="sv" data-svar="nej">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KQ2ZL9C8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Har Magda avgått nu?</title>
+  <meta name="description" content="Svaret på frågan alla ställer sig – live. Magdas humör styrs av hennes chans att bli statsminister.">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://harmagdaavgatt.nu/">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph / sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Har Magda avgått nu?">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:url" content="https://harmagdaavgatt.nu/">
+  <meta property="og:title" content="Har Magda avgått nu?">
+  <meta property="og:description" content="Svaret på frågan alla ställer sig – live. Magdas humör styrs av hennes chans att bli statsminister.">
+  <meta property="og:image" content="https://harmagdaavgatt.nu/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Magdalena Andersson mot svart bakgrund och ett stort rött frågetecken">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Har Magda avgått nu?">
+  <meta name="twitter:description" content="Svaret på frågan alla ställer sig – live. Magdas humör styrs av hennes chans att bli statsminister.">
+  <meta name="twitter:image" content="https://harmagdaavgatt.nu/og.jpg">
+  <link rel="preload" as="image" href="assets/magda.avif" type="image/avif">
+  <link rel="preload" as="fetch" href="assets/magda3d.bin" crossorigin>
+  <link rel="preload" as="font" type="font/otf" href="assets/fonts/CooperHewitt-Heavy.otf" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/OfficeCodePro-Regular.woff2" crossorigin>
+  <style>
+    /* Self-hosted, SIL OFL 1.1 — see assets/fonts/OFL-*.txt */
+    @font-face {
+      font-family: "Cooper Hewitt"; font-weight: 900; font-style: normal; font-display: block;
+      src: url("assets/fonts/CooperHewitt-Heavy.otf") format("opentype");
+    }
+    @font-face {
+      font-family: "Office Code Pro"; font-weight: 400; font-style: normal; font-display: swap;
+      src: url("assets/fonts/OfficeCodePro-Regular.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Office Code Pro"; font-weight: 700; font-style: normal; font-display: swap;
+      src: url("assets/fonts/OfficeCodePro-Bold.woff2") format("woff2");
+    }
+    :root { --red: #e8112d; --green: #19c25a; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #000; color: #fff; }
+    body {
+      font-family: "Office Code Pro", ui-monospace, Menlo, Consolas, monospace;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; min-height: 100svh; overflow: hidden; padding: 16px;
+      /* NEJ: as wide as the screen allows ("NEJ" in Cooper Hewitt Heavy ≈ 1.82em wide), capped by height. */
+      --nej: min(calc((100vw - 32px) / 1.88), 30vh);
+    }
+    @supports (height: 100svh) {
+      body { --nej: min(calc((100vw - 32px) / 1.88), 30svh); }
+      .magda { width: min(100vw - 32px, (100svh - 0.4 * var(--nej) - 84px) * 0.8578) !important; }
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    /* The face fades into the black page: soft oval mask over photo + canvas. */
+    /* Portrait: as big as fits above the visible part of NEJ (≈0.4em) and the note. */
+    .magda {
+      position: relative; flex: none; aspect-ratio: 1478 / 1723;
+      width: min(100vw - 32px, (100vh - 0.4 * var(--nej) - 84px) * 0.8578);
+      -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 36%, #000 55%, transparent 100%);
+              mask-image: radial-gradient(ellipse 62% 58% at 50% 36%, #000 55%, transparent 100%);
+    }
+    .magda img, .magda canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .magda.magda-live img { visibility: hidden; }
+
+    .nej {
+      margin: -0.42em 0 0; position: relative; z-index: 1;
+      font-family: "Cooper Hewitt", "Helvetica Neue", Arial, sans-serif;
+      /* Box ≈ cap top … baseline (Cooper Hewitt Heavy: ascent 0.75, descent 0.25, caps 0.78em). */
+      font-size: var(--nej); line-height: 1.06; margin-bottom: -0.26em; font-weight: 900;
+      letter-spacing: 0; color: var(--red);
+      /* The glyphs overflow the tight line box; don't let them swallow clicks on the note. */
+      pointer-events: none;
+    }
+    /* Flipped by ./svar.sh ja — see UPDATE.md */
+    [data-svar="ja"] .nej { color: var(--green); }
+    .source { margin: 18px 0 0; font-size: 12px; text-align: center; position: relative; z-index: 2; }
+    .source a { color: #777; text-decoration: none; display: inline-block; }
+    .source a:hover, .source a:focus-visible { color: #bbb; text-decoration: underline; }
+    .source strong { color: #aaa; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1 class="sr-only">Har Magda avgått nu?</h1>
+
+  <div class="magda" id="magda">
+    <picture>
+      <source srcset="assets/magda.avif" type="image/avif">
+      <img src="assets/magda.webp" alt="Magdalena Andersson" width="1478" height="1723" decoding="async">
+    </picture>
+  </div>
+
+  <p class="nej" id="svar">NEJ</p>
+
+  <p class="source"><a id="source" href="https://polymarket.com/event/next-prime-minister-of-sweden" rel="noopener">Humöret regleras av Magdas chans att bli statsminister.</a></p>
+
+<script src="magda-face-3d.js"></script>
+<script>
+  (function () {
+    // Mood follows Polymarket's "Next Prime Minister of Sweden" → Magdalena Andersson (Yes price).
+    // 50 % = neutral, 100 % = biggest smile, 0 % = deepest frown. A square-root
+    // curve makes moderate odds read clearly (28 % → about ¾ of the full frown).
+    var MARKET = 'https://gamma-api.polymarket.com/markets/1193094';
+    var REFRESH_MS = 5 * 60 * 1000;   // API is cached for 5 min anyway
+
+    var face = new MagdaFace3D(document.getElementById('magda'), { mood: 0, data: 'assets/magda3d.bin' });
+    var source = document.getElementById('source');
+    var pct = new Intl.NumberFormat('sv-SE', { style: 'percent', maximumFractionDigits: 1 });
+
+    function update() {
+      fetch(MARKET, { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (m) {
+          var p = parseFloat(JSON.parse(m.outcomePrices)[0]);
+          if (!isFinite(p)) throw new Error('no price');
+          var x = Math.max(-1, Math.min(1, (p - 0.5) * 2));
+          face.setMood((x < 0 ? -1 : 1) * Math.sqrt(Math.abs(x)));
+          source.innerHTML = 'Humöret regleras av Magdas chans att bli statsminister. Just nu <strong>' + pct.format(p) + '</strong>';
+        })
+        .catch(function (e) { if (window.console) console.warn('Polymarket fetch failed', e); });
+    }
+    update();
+    setInterval(function () { if (!document.hidden) update(); }, REFRESH_MS);
+  })();
+</script>
+</body>
+</html>
