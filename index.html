@@ -107,7 +107,7 @@
 
   <p class="nej" id="svar">NEJ</p>
 
-  <p class="source"><a id="source" href="https://polymarket.com/event/next-prime-minister-of-sweden" rel="noopener">Humöret regleras av Magdas chans att bli statsminister.</a></p>
+  <p class="source"><a id="source" href="https://polymarket.com/event/next-prime-minister-of-sweden" rel="noopener">Humöret regleras av Magdas chans att bli statsminister enligt prognosmarknaden Polymarket.</a></p>
 
 <script src="magda-face-3d.js"></script>
 <script>
@@ -130,7 +130,7 @@
           if (!isFinite(p)) throw new Error('no price');
           var x = Math.max(-1, Math.min(1, (p - 0.5) * 2));
           face.setMood((x < 0 ? -1 : 1) * Math.sqrt(Math.abs(x)));
-          source.innerHTML = 'Humöret regleras av Magdas chans att bli statsminister. Just nu <strong>' + pct.format(p) + '</strong>';
+          source.innerHTML = 'Humöret regleras av Magdas chans att bli statsminister enligt prognosmarknaden Polymarket. Just nu <strong>' + pct.format(p) + '</strong>';
         })
         .catch(function (e) { if (window.console) console.warn('Polymarket fetch failed', e); });
     }
